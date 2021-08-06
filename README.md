@@ -1,6 +1,6 @@
-# Word trainer web app 
 
-## What does web app do?
+
+# Which tasks web app perfom?
 
 * Take words that will be used in the quiz 
 * Select random word and shuffle it's characters 
