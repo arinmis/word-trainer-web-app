@@ -23,8 +23,8 @@ const quiz = Vue.createApp({
     data() {
         return {
             isStarted: false,
-            quizWord: "",
-            answer: "thiefsk"
+            quizWord: "______",
+            answer: ""
         }
     }
 })
@@ -36,6 +36,8 @@ const answers = Vue.createApp({
     data() {
         return {
             answerArray: [],
+            isCorrect: false,
+            isWrong: true,
         }
     }
 })
@@ -55,6 +57,7 @@ function start() {
 function play() {
     buffer = wordBox.wordArray.splice(generateRandomIndex(wordBox.wordArray.length), 1)[0];
     quizBox.quizWord = shuffle(buffer);
+    quizBox.answer = "";
 }
 
 function check() {
@@ -63,15 +66,21 @@ function check() {
         return;
     if (buffer == quizBox.answer) {
         answerBox.answerArray.push(buffer + " -> true");
+        answerBox.isCorrect = true;
+        answerBox.isWrong = false;
         correctAnswer++;
     }
-    else
+    else {
         answerBox.answerArray.push(buffer + " -> false");
+        answerBox.isCorrect = false;
+        answerBox.isWrong = true;
+    }
     if (wordBox.wordArray.length == 0) {
         const result = correctAnswer / totalWord * 100;
         alert("Your score(out of 100): " + result.toFixed().toString());
     }
-    play();
+    if (wordBox.wordArray.length != 0)
+        play();
 }
 
 function generateRandomIndex(lenth) {
