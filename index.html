@@ -9,16 +9,24 @@
     <body>
         <div class="container">
           <div class="row">
+            <div class="col bg-light" id="words" >
+                <ol>
+                    <li v-for="word in wordArray">
+                        {{ word }}
+                    </li>
+                </ol>
+                <input v-model="newWord" placeholder="write new word">
+                    <button onclick="addWord()">add</button>
+                </input> 
+             </div>
             <div class="col">
-                <div class="card bg-light" style="width: 18rem;">
-                    Column
-                </div>
-            </div>
-            <div class="col">
-                <div id="counter">
-                      Counter: {{ counter }}
-                </div>
-                Column
+                <!-- button>Start</button>
+                <div>{{ quizWord }}</div>
+                <div>
+                    <input v-model="answer" placeholder="write the answer">
+                        <button onclick="check()">add</button>
+                    </input> 
+                </divi -->
             </div>
             <div class="col">
                 <div class="card bg-light" style="width: 18rem;">
