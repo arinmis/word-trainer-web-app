@@ -68,8 +68,8 @@ function check() {
     else
         answerBox.answerArray.push(buffer + " -> false");
     if (wordBox.wordArray.length == 0) {
-        const result = correctAnswer / totalWorld * 100;
-        alert("Your score: " + result.toString());
+        const result = correctAnswer / totalWord * 100;
+        alert("Your score(out of 100): " + result.toFixed().toString());
     }
     play();
 }
