@@ -19,19 +19,21 @@
                     <button onclick="addWord()">add</button>
                 </input> 
              </div>
-            <div class="col">
-                <!-- button>Start</button>
+            <div class="col" id="quiz">
+                <button onClick="start()">Start</button>
                 <div>{{ quizWord }}</div>
                 <div>
                     <input v-model="answer" placeholder="write the answer">
-                        <button onclick="check()">add</button>
+                        <button onClick="check()">Answer</button>
                     </input> 
-                </divi -->
-            </div>
-            <div class="col">
-                <div class="card bg-light" style="width: 18rem;">
-                    Column
                 </div>
+            </div>
+            <div class="col" id="answers">
+                <ol>
+                    <li v-for="answer in answerArray">
+                        {{ answer }}
+                    </li>
+                </ol>
             </div>
           </div>
         </div>
