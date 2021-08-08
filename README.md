@@ -8,7 +8,6 @@
 * Report total score when all the given words were asked  
 
 ## Demo picture
-https://user-images.githubusercontent.com/56651041/128644928-64be24d8-7090-4de9-ba04-43391cc81485.png
 ![demo](https://user-images.githubusercontent.com/56651041/128644928-64be24d8-7090-4de9-ba04-43391cc81485.png)
 
 
