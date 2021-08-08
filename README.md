@@ -1,6 +1,6 @@
 
 
-# Which tasks web app perform?
+# Which tasks the web app perform?
 
 * Take words that will be used in the quiz 
 * Select random word and shuffle it's characters 
