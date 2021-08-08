@@ -11,8 +11,9 @@ const words = Vue.createApp({
 const wordBox = words.mount("#words");
 
 function addWord() {
+    wordBox.newWord = wordBox.newWord.trim().toLowerCase(); 
     if (wordBox.newWord.length > 1 && !wordBox.wordArray.includes(wordBox.newWord)) {
-        wordBox.wordArray.push(wordBox.newWord.trim());
+        wordBox.wordArray.push(wordBox.newWord);
         wordBox.newWord = ""; 
     }
 }
@@ -24,12 +25,10 @@ const quiz = Vue.createApp({
         return {
             isStarted: false,
             quizWord:"Go",
-            wordTemplate:" af ",  
             answer: ""
         }
     }, 
     mounted() {
-        this.wordTemplate = generateTemplate(this.quizWord.length);
         this.quizWord = this.quizWord.replaceAll('', ' ');
     }
 })
@@ -67,7 +66,7 @@ function play() {
 }
 
 function check() {
-    console.log("here");
+    quizBox.answer = quizBox.answer.trim().toLowerCase(); 
     if (!quiz.isStarted || quizBox.answer.length != buffer.length) 
         return;
     if (buffer == quizBox.answer) {
