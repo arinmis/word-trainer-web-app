@@ -10,7 +10,7 @@
 ## How to use word trainer
 - Add words that you wanted to spelling practice
 - Then press the start button
-- One of the word that you had passed before will be shuffled and displayed center of the page
+- One of the word that you had passed before will be shuffled and displayed on center of the page
 - If your answer is correct it will be displayed on the left part of the page otherwise it will be red 
 
 ## Demo picture
