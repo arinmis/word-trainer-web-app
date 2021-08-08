@@ -2,7 +2,7 @@
 const words = Vue.createApp({
     data() {
         return {
-            wordArray: ["help"],
+            wordArray: [],
             newWord: ""
         }
     }
@@ -52,6 +52,10 @@ let totalWord = 0;
 let correctAnswer = 0;
 // start the game
 function start() {
+    if (wordBox.wordArray.length == 0) {
+        alert("enter word to start");
+        return;
+    }
     totalWord = wordBox.wordArray.length;
     quiz.isStarted = true;
     play();
