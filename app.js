@@ -12,7 +12,7 @@ const wordBox = words.mount("#words");
 
 function addWord() {
     if (wordBox.newWord.length > 1 && !wordBox.wordArray.includes(wordBox.newWord)) {
-        wordBox.wordArray.push(wordBox.newWord);
+        wordBox.wordArray.push(wordBox.newWord.trim());
         wordBox.newWord = ""; 
     }
 }
@@ -23,9 +23,14 @@ const quiz = Vue.createApp({
     data() {
         return {
             isStarted: false,
-            quizWord: "_ _ _ _ _ _",
+            quizWord:"Go",
+            wordTemplate:" af ",  
             answer: ""
         }
+    }, 
+    mounted() {
+        this.wordTemplate = generateTemplate(this.quizWord.length);
+        this.quizWord = this.quizWord.replaceAll('', ' ');
     }
 })
  
@@ -56,6 +61,8 @@ function start() {
 function play() {
     buffer = wordBox.wordArray.splice(generateRandomIndex(wordBox.wordArray.length), 1)[0];
     quizBox.quizWord = shuffle(buffer);
+    quizBox.wordTemplate = generateTemplate(quizBox.quizWord.length); 
+    quizBox.quizWord = quizBox.quizWord.replaceAll('', ' '); 
     quizBox.answer = "";
 }
 
@@ -82,10 +89,18 @@ function generateRandomIndex(lenth) {
     return Math.floor(Math.random() * lenth);
 }
 
+//shuffle given string's chars
 function shuffle(str) {
     chars = str.split('');
     let shuffledStr = "";
     while (chars.length != 0) 
         shuffledStr += chars.splice(generateRandomIndex(chars.length), 1);
     return shuffledStr; 
+}
+ 
+function generateTemplate(length) {
+    let template = "";
+    for (let i = 0; i < length - 1; i++)
+            template += "‾ ";
+    return template + '‾' ;
 }
