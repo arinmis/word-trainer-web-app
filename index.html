@@ -10,43 +10,54 @@
     </head>
     <body class="bg-dark bg-gradient">
         <div class="container ">
-          <div class="row vh-100 py-5 justify-content-evenly text-center">
-            <div class="col-3 py-3 bg-secondary bg-gradient shadow rounded" id="words" >
-                <input v-model="newWord" placeholder="write new word">
-                    <button class="btn btn-info ms-1" onclick="addWord()">add</button>
-                </input> 
-                <ol class="my-3">
-                    <li v-for="word in wordArray" class="bg-info m-2 rounded">
-                        {{ word }}
-                    </li>
-                </ol>
+          <div class="row vh-100 py-5 justify-content-evenly text-center text-white ">
+            <div class="col-3 py-3  bg-transparent shadow rounded h-100 overflow-hidden" id="words" >
+                <div class="row-2">
+                     <div  class="input-group mb-3">
+                        <input v-model="newWord" type="text" class="form-control" placeholder="write new word">
+                        <button class="btn btn-info ms-1" onclick="addWord()">add</button>
+                    </div>
+                </div>
+                <div class="row px-2 h-100 overflow-auto">
+                    <ol>
+                        <li v-for="word in wordArray" class="bg-info m-2 rounded">
+                            {{ word }}
+                        </li>
+                    </ol>
+                </div>
             </div>
-            <div class="col-3 py-3 bg-secondary bg-gradient shadow rounded" id="quiz">
-                <button class="btn btn-primary" onClick="start()">
-                     <i class="bi bi-skip-start"></i>
-                     Start
-                </button>
-                <div class="my-5">
+            <div class="col-3 py-3 bg-transparent bg-gradient shadow-lg" id="quiz">
+                <div class="row-2 mb-5">
+                    <button class="btn btn-primary" onClick="start()">
+                         <i class="bi bi-skip-start"></i>
+                         Start
+                    </button>
+                </div>
+                <div class="row-4 my-5">
                     <div>{{ quizWord }}</div>
                     <div>{{ wordTemplate }}</div>
-                    
                 </div>
-                <div >
-                    <input v-model="answer" placeholder="write the answer">
-                        <button class="btn btn-dark mt-3" class="my-3" onClick="check()">Answer</button>
-                    </input> 
+                <div class="row-6">
+                     <div  class="input-group mb-3">
+                        <input v-model="answer" type="text" class="form-control" placeholder="write the answer">
+                    </div>
+                    <button class="btn btn-info ms-1" onClick="check()">Answer</button>
                 </div>
             </div>
-            <div class="col-3 bg-secondary  bg-gradient p-3 shadow rounded" id="answers">
-                <h1 class="text-white">Answers</h1>
-                <ol>
-                    <li v-for="answer in correctAnswers" class="bg-success my-2 rounded">
-                            {{ answer }}
-                    </li>
-                    <li v-for="answer in wrongAnswers" class="bg-danger my-2 rounded">
-                            {{ answer }}
-                    </li>
-                </ol>
+            <div class="col-3 bg-gradient px-2 bg-transparent shadow rounded h-100 overflow-auto" id="answers">
+                <div class="row-2 mb-3">
+                    <h1>Answers</h1>
+                </div>
+                <div class="row-10">
+                    <ol>
+                        <li v-for="answer in correctAnswers" class="bg-success my-2 rounded">
+                                {{ answer }}
+                        </li>
+                        <li v-for="answer in wrongAnswers" class="bg-danger my-2 rounded">
+                                {{ answer }}
+                        </li>
+                    </ol>
+                </div>
             </div>
           </div>
         </div>
