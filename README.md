@@ -1,6 +1,6 @@
 
 
-# Which tasks the web app perform?
+## Which tasks the web app perform?
 
 * Take words that will be used in the quiz 
 * Select random word and shuffle it's characters 
@@ -13,7 +13,7 @@
 - One of the word that you had passed before will be shuffled and displayed center of the page
 - If your answer is correct it will be displayed on the left part of the page otherwise it will be red 
 
-### Demo picture
+## Demo picture
 ![demo](https://user-images.githubusercontent.com/56651041/128644928-64be24d8-7090-4de9-ba04-43391cc81485.png)
 
 
