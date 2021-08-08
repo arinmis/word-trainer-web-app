@@ -23,7 +23,7 @@ const quiz = Vue.createApp({
     data() {
         return {
             isStarted: false,
-            quizWord: "______",
+            quizWord: "_ _ _ _ _ _",
             answer: ""
         }
     }
@@ -35,9 +35,8 @@ const quizBox = quiz.mount("#quiz");
 const answers = Vue.createApp({
     data() {
         return {
-            answerArray: [],
-            isCorrect: false,
-            isWrong: true,
+            correctAnswers: [],
+            wrongAnswers: [],
         }
     }
 })
@@ -65,19 +64,15 @@ function check() {
     if (!quiz.isStarted || quizBox.answer.length != buffer.length) 
         return;
     if (buffer == quizBox.answer) {
-        answerBox.answerArray.push(buffer + " -> true");
-        answerBox.isCorrect = true;
-        answerBox.isWrong = false;
+        answerBox.correctAnswers.push(buffer);
         correctAnswer++;
     }
     else {
-        answerBox.answerArray.push(buffer + " -> false");
-        answerBox.isCorrect = false;
-        answerBox.isWrong = true;
+        answerBox.wrongAnswers.push(buffer);
     }
     if (wordBox.wordArray.length == 0) {
         const result = correctAnswer / totalWord * 100;
-        alert("Your score(out of 100): " + result.toFixed().toString());
+        alert("Your score: " + result.toFixed().toString() + " / 100");
     }
     if (wordBox.wordArray.length != 0)
         play();
