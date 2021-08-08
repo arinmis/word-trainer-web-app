@@ -17,5 +17,5 @@
 ![demo](https://user-images.githubusercontent.com/56651041/128644928-64be24d8-7090-4de9-ba04-43391cc81485.png)
 
 ## Bugs:
-* Result alert raise before the last answer printed
+1. Result alert raise before the last answer printed
 
