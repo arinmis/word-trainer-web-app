@@ -18,6 +18,5 @@
 ![demo](https://user-images.githubusercontent.com/56651041/128644928-64be24d8-7090-4de9-ba04-43391cc81485.png)
 
 ## To Do:
-1. Bug: Result alert raise before the last answer printed
-2. Warn user when he/she tries to add same word again
+1. Warn user when he/she tries to add same word again
 

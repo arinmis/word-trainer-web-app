@@ -82,7 +82,9 @@ function check() {
     }
     if (wordBox.wordArray.length == 0) {
         const result = correctAnswer / totalWord * 100;
-        alert("Your score: " + result.toFixed().toString() + " / 100");
+        setTimeout(function() {
+            alert("Your score: " + result.toFixed().toString() + " / 100");
+        }, 500)
     }
     if (wordBox.wordArray.length != 0)
         play();
