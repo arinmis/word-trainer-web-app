@@ -13,8 +13,8 @@
 - One of the word that you had passed before will be shuffled and displayed on center of the page
 - If your answer is correct it will be displayed, where on the left part of the page, as green otherwise it will be red 
 
-## Demo picture
-Live demo: https://arinmis.github.io/word-trainer-web-app/ 
+## Demo 
+- Live demo: https://arinmis.github.io/word-trainer-web-app/ 
 ![demo](https://user-images.githubusercontent.com/56651041/128644928-64be24d8-7090-4de9-ba04-43391cc81485.png)
 
 ## To Do:
