@@ -8,10 +8,10 @@
 * Report total score when all the given words were asked  
 
 ## How to use word trainer
-- Add words that you wanted to spelling practice
-- Then press the start button
-- One of the word that you had passed before will be shuffled and displayed on center of the page
-- If your answer is correct it will be displayed, where on the left part of the page, as green otherwise it will be red 
+1. Add words that you wanted to spelling practice
+2. Then press the start button
+3. One of the word that you had passed before will be shuffled and displayed on center of the page
+4. If your answer is correct it will be displayed, where on the left part of the page, as green otherwise it will be red 
 
 ## Demo 
 - Live demo: https://arinmis.github.io/word-trainer-web-app/ 
