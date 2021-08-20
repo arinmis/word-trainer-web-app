@@ -9,16 +9,16 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     </head>
     <body class="bg-dark bg-gradient">
-        <div class="container">
-          <div class="row min-vh-100 py-5 justify-content-evenly text-center text-white ">
-            <div class="col-3 py-3  my-2 bg-transparent shadow rounded overflow-hidden"  style="min-width: 300px" id="words" >
+        <div class="container vh-100">
+          <div class="row  h-100 py-5 justify-content-evenly text-center text-white">
+            <div class="col-3 h-100 py-3 my-2  bg-transparent shadow rounded overflow-hidden"  style="min-width: 300px" id="words" >
                 <div class="row-2">
                      <div  class="input-group mb-3">
                         <input v-model="newWord" type="text" class="form-control" placeholder="write new word">
                         <button class="btn btn-info ms-1" onclick="addWord()">add</button>
                     </div>
                 </div>
-                <div class="row px-2 overflow-auto">
+                <div class="row px-2 pb-4 my-2 h-100 overflow-auto">
                     <ol>
                         <li v-for="word in wordArray" class="bg-info m-2 rounded">
                             {{ word }}
@@ -50,11 +50,11 @@
                     <button class="btn btn-info ms-1" onClick="check()">Answer</button>
                 </div>
             </div>
-            <div class="col-3 my-2 bg-gradient px-2 bg-transparent shadow rounded overflow-auto"  style="min-width: 300px" id="answers">
+            <div class="col-3 my-2 h-100 bg-gradient px-2 bg-transparent shadow rounded overflow-hidden"  style="min-width: 300px" id="answers">
                 <div class="row-2 mb-3">
                     <h1>Answers</h1>
                 </div>
-                <div class="row-10">
+                <div class="row-10 h-100 px-2 pb-4 my-2 overflow-auto">
                     <ol>
                         <li v-for="answer in correctAnswers" class="bg-success my-2 rounded">
                                 {{ answer }}
