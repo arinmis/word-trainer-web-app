@@ -19,4 +19,5 @@
 
 ## To Do:
 1. Warn user when he/she tries to add same word again
+2. Implement CRUD 
 
