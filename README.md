@@ -21,4 +21,5 @@
 1. Warn user when he/she tries to add same word again
 2. Implement CRUD 
 3. Add 'restart' and 'delete' options
+4. End of the quiz, reset input box
 
